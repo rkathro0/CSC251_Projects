@@ -10,6 +10,9 @@ public class Policy
       private double policyHolderHeight;
       private double policyHolderWeight;
       
+      /**
+         No-Arg Constructor
+      */
       public Policy()
          {
             policyNum = 0;
@@ -21,6 +24,10 @@ public class Policy
             policyHolderHeight = 0;
             policyHolderWeight = 0;
          }
+      
+      /**
+         Constructor
+      */
       public Policy(int num, String provName, String fName, String LName, int age, String smoke, double height, double weight)
          {
             policyNum = num;
@@ -32,6 +39,10 @@ public class Policy
             policyHolderHeight = height;
             policyHolderWeight = weight;
          }
+      
+      /**
+         Mutators for all changeable fields
+      */
       public void setPolicyNumber(int num)
          {
             policyNum = num;
@@ -66,6 +77,9 @@ public class Policy
          }
       
       
+      /**
+         Accessors for all fields
+      */
       public int getPolicyNumber()
          {
             return policyNum;
@@ -98,10 +112,20 @@ public class Policy
          {
             return policyHolderWeight;
          }
+      
+      /**
+         Calculates BMI of policyholder using height and weight
+         @return the BMI
+      */
       public double getBMI()
          {
             return ((policyHolderWeight * 703) / (policyHolderHeight * policyHolderHeight));
          }
+      
+      /**
+         Calculates policy price using age smoking status and BMI of policyholder
+         @return the policy price
+      */
       public double getPolicyPrice()
          {
             double price = 600;
